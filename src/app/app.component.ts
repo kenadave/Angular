@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+  demo = {
+    title : 'This value is from component class using [value] property. Click on the below Icon for (click) behaviour'
+  };
+
+  onLogoClicked(){
+    alert('Hello World');
+  }
+
+  onKeyUp(newTitle : string){
+    this.demo.title = newTitle;
+  }
 }

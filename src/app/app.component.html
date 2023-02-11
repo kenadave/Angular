@@ -300,6 +300,7 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
+
   <img
     width="40"
     alt="Angular Logo"
@@ -316,7 +317,12 @@
 </div>
 
 <div class="content" role="main">
-
+  <h1>This is a title and to change the value after colons, change in the input text box below : {{demo.title}}</h1>
+  <input class="demo" (keyup) = "onKeyUp(titleInput.value)" [value]="demo.title" #titleInput>
+  <input class="demo" (keyup) = "onKeyUp(titleInput2.value)" [value]="demo.title" #titleInput3>
+  <input class="demo" (keyup) = "onKeyUp(titleInput3.value)" [value]="demo.title" #titleInput2>
+  <br><br>
+  <img width="300"  (click)="onLogoClicked()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPLN2FKTcGWzZBVEk6h1lPusUOdJ26zy-b3puX87Bk8Q&s">
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
 
